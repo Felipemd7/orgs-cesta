@@ -11,7 +11,7 @@ export default function Cesta(){
         <Text style={estilos.titulo}>Detalhe da Cesta</Text>       
 
         <View style={estilos.espacoCesta}>            
-        <Text style={estilos.nomeCesta}>Cesta de Verduras</Text>
+        <Text style={estilos.nomeCesta}>Cesta de Verdura</Text>
 
         <View style={estilos.orgFazenda}>
          <Image style={estilos.logoFazenda} source={logo}></Image>   
