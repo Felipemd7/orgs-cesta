@@ -1,5 +1,7 @@
 import React from "react";
 import { Text, Image, StyleSheet, Dimensions, View } from 'react-native';
+import Font_regular from "../componetes/Regular";
+import Font_negrito from "../componetes/Bold";
 import topo from '../../assets/topo.png';
 import logo from '../../assets/logo.png';
 
@@ -11,18 +13,18 @@ export default function Cesta(){
         <Text style={estilos.titulo}>Detalhe da Cesta</Text>       
 
         <View style={estilos.espacoCesta}>            
-        <Text style={estilos.nomeCesta}>Cesta de Verdura</Text>
+        <Font_negrito style={estilos.nomeCesta}>Cesta de Verdura</Font_negrito>
 
         <View style={estilos.orgFazenda}>
          <Image style={estilos.logoFazenda} source={logo}></Image>   
         <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
         </View>
 
-        <Text style={estilos.descricao}>
+        <Font_regular style={estilos.descricao}>
         Uma cesta com produtos 
         selecionados cuidadosamente da 
         fazenda direto para a cozinha.
-        </Text>
+        </Font_regular>
         
         <Text style={estilos.preco}>$40,00</Text>
         </View>
@@ -52,7 +54,7 @@ const estilos = StyleSheet.create({
         color: "#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontFamily: "MontserratBold"
+       
     },
     espacoCesta: {
         paddingHorizontal: 16,
