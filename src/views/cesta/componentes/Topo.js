@@ -4,16 +4,16 @@ import topo from '../../../../assets/topo.png';
 
 const width = Dimensions.get('screen').width; //pegando dimensões da tela para colocar no topo
 
-export default function Topo() {
+export default function Topo({titulo}) {
 return <>
     <Image source={topo} style={estilos.topo} />
-    <Text style={estilos.titulo}>Detalhe da Cesta</Text>   
+    <Text style={estilos.titulo}>{titulo}</Text>   
     </>
 }
 
 
 const estilos = StyleSheet.create({
-    topo: {
+    topo: { 
         width: "100%",
         height: 578 / 768 * width, // altura/largura * width
     },

@@ -1,25 +1,25 @@
 import React from 'react';
-import { Text, Image, View, StyleSheet} from 'react-native';
+import { Text, Image, View, StyleSheet, TouchableOpacity} from 'react-native';
 import Font_regular from "../../../componetes/Regular";
 import Font_negrito from "../../../componetes/Bold";
-import logo from '../../../../assets/logo.png';
 
-export default function Detalhes() {
+
+
+export default function Detalhes({nomeCesta, logoFazenda, nomeFazenda, descricao, preco, botao}) {
 return <>
-     <Font_negrito style={estilos.nomeCesta}>Cesta de Verdura</Font_negrito>
+     <Font_negrito style={estilos.nomeCesta}>{nomeCesta}</Font_negrito>
         <View style={estilos.orgFazenda}>
-        <Image style={estilos.logoFazenda} source={logo}></Image>   
-    <   Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+        <Image style={estilos.logoFazenda} source={logoFazenda}></Image>   
+    <   Text style={estilos.nomeFazenda}>{nomeFazenda}</Text>
         </View>
-
-        <Font_regular style={estilos.descricao}>
-        Uma cesta com produtos 
-        selecionados cuidadosamente da 
-        fazenda direto para a cozinha.
-        </Font_regular>
-
-        <Text style={estilos.preco}>$40,00</Text>
+        <Font_regular style={estilos.descricao}>{descricao}</Font_regular>
+        <Text style={estilos.preco}>{preco}</Text>
+        <TouchableOpacity style={estilos.botao}>
+        <Font_negrito style={estilos.textoBotao}>{botao}</Font_negrito> 
+        </TouchableOpacity>
         </>
+
+        
 }
 
 const estilos = StyleSheet.create({
@@ -57,6 +57,18 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8,
-    }
+    },
+    botao: {
+        marginTop: 16,
+        backgroundColor: "#2A9F85",
+        paddingVertical: 16,
+        borderRadius: 6,
+        alignItems: "center",
+    },
+    textoBotao: {
+        color: "white",
+        fontSize: 16,
+        lineHeight: 26,
+    },
 
 }); 
